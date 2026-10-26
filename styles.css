@@ -148,7 +148,7 @@ ul { margin: 0; padding: 0; list-style: none; }
 }
 .nav__toggle svg { width: 22px; stroke: var(--white); stroke-width: 1.6; fill: none; }
 
-@media (max-width: 860px) {
+@media (max-width: 1080px) {
   .nav__toggle { display: grid; }
   .nav__links {
     position: fixed; inset: var(--nav-h) 0 0; z-index: 49;
@@ -861,7 +861,7 @@ p, li, dd, blockquote { text-wrap: pretty; }
 .stat dt { font-variant-numeric: tabular-nums; }
 /* Sección actual marcada en el menú */
 .nav__links a[aria-current="true"]:not(.btn) { color: var(--mint); }
-@media (min-width: 861px) {
+@media (min-width: 1081px) {
   .nav__links a:not(.btn) { position: relative; }
   .nav__links a:not(.btn)::after {
     content: ""; position: absolute; left: 0; right: 0; bottom: -6px; height: 1px; background: var(--mint);
