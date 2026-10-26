@@ -5,9 +5,6 @@ url: https://hitogrowth.com
 lang: es
 timezone: Europe/Madrid
 
-# Dirección de cada artículo: hitogrowth.com/blog/titulo-del-articulo/
-permalink: /blog/:title/
-
 markdown: kramdown
 kramdown:
   input: GFM
@@ -22,6 +19,8 @@ defaults:
       type: posts
     values:
       layout: post
+      # Dirección de cada artículo: hitogrowth.com/blog/titulo-del-articulo/
+      permalink: /blog/:title/
 
 exclude:
   - .gitignore
