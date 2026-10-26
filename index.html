@@ -1,0 +1,467 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>HitoGrowth · Consultoría y estrategia digital para pymes</title>
+  <meta name="description" content="HitoGrowth: consultoría y estrategia digital para pymes. Diseño web, publicidad digital, contenido en redes sociales e IA para tu negocio.">
+  <meta name="theme-color" content="#08110D">
+  <link rel="canonical" href="https://hitogrowth.com/">
+  <!-- Vista previa al compartir el enlace (WhatsApp, LinkedIn…) -->
+  <meta property="og:url" content="https://hitogrowth.com/">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="es_ES">
+  <meta property="og:site_name" content="HitoGrowth">
+  <meta property="og:title" content="HitoGrowth · Consultoría y estrategia digital para pymes">
+  <meta property="og:description" content="13 años convirtiendo inversión publicitaria en resultados medibles. Primera consulta gratuita y sin compromiso.">
+  <meta property="og:image" content="https://hitogrowth.com/assets/img/carlos-gutierrez-dark.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <!-- Si cambias styles.css o script.js, sube el número de "?v=" para que el navegador cargue la versión nueva -->
+  <link rel="stylesheet" href="styles.css?v=12">
+</head>
+<body>
+
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+  <!-- ============ CABECERA / MENÚ ============ -->
+  <header class="nav" data-nav>
+    <div class="nav__inner">
+      <a class="brand" href="#inicio" aria-label="HitoGrowth, ir al inicio">
+        <svg class="brand__mark" viewBox="0 0 32 28" aria-hidden="true">
+          <path d="M1 3.5C10 6.6 22 6.6 31 3.5L30.4 7.6C22 10.2 10 10.2 1.6 7.6Z"/>
+          <rect x="4" y="12.4" width="24" height="2.6"/>
+          <path d="M7.4 8.6h3.1L10.9 28H7Z"/>
+          <path d="M21.5 8.6h3.1L25 28h-3.9Z"/>
+        </svg>
+        <span class="brand__name">HitoGrowth</span>
+      </a>
+
+      <nav class="nav__links" id="menu" aria-label="Principal">
+        <a href="#servicios">Servicios</a>
+        <a href="#sobre-mi">Sobre mí</a>
+        <a href="#confian">Confían en HitoGrowth</a>
+        <a href="#contacto">Contacto</a>
+        <a class="btn btn--primary btn--sm nav__cta" href="#contacto">Pide presupuesto</a>
+      </nav>
+
+      <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="menu" data-menu-toggle>
+        <span class="sr-only">Abrir menú</span>
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path class="l1" d="M3 7h18"/><path class="l2" d="M3 12h18"/><path class="l3" d="M3 17h18"/></svg>
+      </button>
+    </div>
+  </header>
+
+  <main id="contenido">
+
+    <!-- ============ PORTADA: EL TORII ============ -->
+    <section class="hero" id="inicio" data-hero>
+      <div class="hero__stage">
+        <canvas class="hero__motes" data-motes aria-hidden="true"></canvas>
+
+        <div class="torii" data-torii aria-hidden="true">
+          <div class="torii__glow"></div>
+
+          <!-- Torii para pantallas anchas -->
+          <svg class="torii__svg torii__svg--wide" viewBox="0 0 1000 820" preserveAspectRatio="xMidYMin meet">
+            <defs>
+              <linearGradient id="beamW" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0" stop-color="#2B4A3A"/>
+                <stop offset="1" stop-color="#0B1712"/>
+              </linearGradient>
+              <linearGradient id="pillarW" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0" stop-color="#26493B"/>
+                <stop offset="1" stop-color="#0D1A14"/>
+              </linearGradient>
+              <linearGradient id="rimW" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0" stop-color="#96FCC6" stop-opacity=".95"/>
+                <stop offset="1" stop-color="#96FCC6" stop-opacity="0"/>
+              </linearGradient>
+            </defs>
+            <!-- pilares (hashira) -->
+            <path d="M152 160h44l6 660h-62Z" fill="url(#pillarW)"/>
+            <path d="M804 160h44l12 660h-62Z" fill="url(#pillarW)"/>
+            <!-- luz en el canto interior de los pilares -->
+            <path d="M195 164h3l7 656h-5Z" fill="url(#rimW)"/>
+            <path d="M802 164h3l-5 656h-5Z" fill="url(#rimW)"/>
+            <path d="M152 164h2l-12 656h-2Z" fill="url(#rimW)" opacity=".35"/>
+            <path d="M846 164h2l12 656h-2Z" fill="url(#rimW)" opacity=".35"/>
+            <!-- viga inferior (nuki) -->
+            <rect x="90" y="250" width="820" height="26" fill="url(#beamW)"/>
+            <path d="M200 276h600" stroke="#96FCC6" stroke-opacity=".55" stroke-width="1.5"/>
+            <!-- poste central y placa (gakuzuka) -->
+            <rect x="482" y="164" width="36" height="86" fill="#0E1C16"/>
+            <rect x="462" y="176" width="76" height="58" fill="#0B1712" stroke="#96FCC6" stroke-opacity=".5" stroke-width="1.5"/>
+            <path d="M480 196C492 199.5 508 199.5 520 196M484 206h32M489 199v22M511 199v22" stroke="#96FCC6" stroke-width="3" fill="none" stroke-linecap="square"/>
+            <!-- viga bajo el techo (shimaki) -->
+            <rect x="-100" y="136" width="1200" height="28" fill="url(#beamW)"/>
+            <!-- techo curvo (kasagi) -->
+            <path d="M-170 26C250 104 750 104 1170 26L1160 76C750 150 250 150 -160 76Z" fill="url(#beamW)"/>
+            <path d="M-170 26C250 104 750 104 1170 26" stroke="#96FCC6" stroke-opacity=".7" stroke-width="2" fill="none"/>
+          </svg>
+
+          <!-- Torii para móvil (más alto y estrecho) -->
+          <svg class="torii__svg torii__svg--narrow" viewBox="0 0 1000 1400" preserveAspectRatio="xMidYMin meet">
+            <defs>
+              <linearGradient id="beamN" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0" stop-color="#2B4A3A"/>
+                <stop offset="1" stop-color="#0B1712"/>
+              </linearGradient>
+              <linearGradient id="pillarN" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0" stop-color="#26493B"/>
+                <stop offset=".8" stop-color="#0D1A14"/>
+              </linearGradient>
+              <linearGradient id="rimN" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0" stop-color="#96FCC6" stop-opacity=".95"/>
+                <stop offset="1" stop-color="#96FCC6" stop-opacity="0"/>
+              </linearGradient>
+            </defs>
+            <path d="M100 138h44l6 1262h-58Z" fill="url(#pillarN)"/>
+            <path d="M856 138h44l8 1262h-58Z" fill="url(#pillarN)"/>
+            <path d="M143 228h4l5 900h-5Z" fill="url(#rimN)"/>
+            <path d="M853 228h4l-2 900h-5Z" fill="url(#rimN)"/>
+            <rect x="60" y="206" width="880" height="24" fill="url(#beamN)"/>
+            <path d="M148 230h704" stroke="#96FCC6" stroke-opacity=".55" stroke-width="2"/>
+            <rect x="480" y="138" width="40" height="68" fill="#0E1C16"/>
+            <rect x="456" y="146" width="88" height="54" fill="#0B1712" stroke="#96FCC6" stroke-opacity=".5" stroke-width="2"/>
+            <path d="M478 164C492 168 508 168 522 164M482 175h36M488 168v22M512 168v22" stroke="#96FCC6" stroke-width="4" fill="none" stroke-linecap="square"/>
+            <rect x="40" y="114" width="920" height="24" fill="url(#beamN)"/>
+            <path d="M0 40C250 82 750 82 1000 40L994 80C750 120 250 120 6 80Z" fill="url(#beamN)"/>
+            <path d="M0 40C250 82 750 82 1000 40" stroke="#96FCC6" stroke-opacity=".7" stroke-width="3" fill="none"/>
+          </svg>
+        </div>
+
+        <div class="hero__mist" aria-hidden="true"></div>
+
+        <div class="hero__content" data-hero-content>
+          <h1 class="hero__title">Cruza el umbral digital</h1>
+          <p class="hero__lede">13 años convirtiendo inversión publicitaria en resultados medibles. Empieza con una consulta gratuita y sin compromiso.</p>
+          <div class="hero__actions">
+            <a class="btn btn--primary" href="#contacto">Pide presupuesto</a>
+            <button class="hero__chat" type="button" data-chat-open>o resuelve tus dudas con el asistente</button>
+          </div>
+        </div>
+
+        <p class="hero__hint" data-hero-hint aria-hidden="true"><span>Desliza para cruzar</span></p>
+
+        <div class="hero__flood hero__flood--light" aria-hidden="true"></div>
+        <div class="hero__flood hero__flood--field" aria-hidden="true"></div>
+      </div>
+    </section>
+
+    <!-- ============ SERVICIOS ============ -->
+    <section class="services" id="servicios" aria-labelledby="servicios-titulo">
+      <div class="container services__grid">
+        <div class="section-head">
+          <h2 id="servicios-titulo" class="section-title">Lo que hacemos por tu negocio</h2>
+          <p class="section-lede">Soluciones a la medida de tu negocio para acelerar tu crecimiento digital. Elige el servicio que necesitas o combínalos en una estrategia integral.</p>
+        </div>
+
+        <ul class="service-list">
+          <li class="service">
+            <svg class="svc-icon svc-icon--web" viewBox="0 0 64 64" aria-hidden="true">
+              <rect class="c3 tint" x="16" y="6" width="40" height="28" rx="3"/>
+              <rect class="c2 tint" x="11" y="12" width="40" height="28" rx="3"/>
+              <g class="c1"><rect class="solid" x="6" y="18" width="40" height="28" rx="3"/><path d="M6 25h40"/><path class="dot" d="M10 21.5h.01M13.5 21.5h.01M17 21.5h.01"/><rect class="blk" x="11" y="30" width="13" height="11" rx="1.5"/><path class="ln ln1" d="M28 31.5h12"/><path class="ln ln2" d="M28 35.5h9"/><path class="ln ln3" d="M28 39.5h11"/></g>
+              <path class="cur" d="M44 42v14l3.6-3.4 2.8 6 2.4-1.1-2.8-5.9h5.1Z"/>
+            </svg>
+            <div class="service__text">
+              <h3 class="service__name">Desarrollo y diseño web</h3>
+            <p class="service__desc">Páginas web profesionales, claras y rápidas, optimizadas y pensadas para la conversión.</p>
+            <a class="service__link" href="#contacto" data-service="web">Pide presupuesto <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"/></svg></a>
+            </div>
+          </li>
+          <li class="service">
+            <svg class="svc-icon svc-icon--map" viewBox="0 0 64 64" aria-hidden="true">
+              <path class="alt" d="M14 50H50V14"/>
+              <circle class="gd" cx="32" cy="50" r="1.6"/><circle class="gd" cx="50" cy="50" r="1.6"/><circle class="gd" cx="50" cy="32" r="1.6"/><circle class="gd" cx="14" cy="14" r="1.6"/>
+              <path class="route" pathLength="1" d="M14 50V32h18V14h18"/>
+              <circle class="nd nd1" cx="14" cy="32" r="2.6"/><circle class="nd nd2" cx="32" cy="32" r="2.6"/><circle class="nd nd3" cx="32" cy="14" r="2.6"/>
+              <circle class="start" cx="14" cy="50" r="3.6"/>
+              <circle class="pulse" cx="50" cy="14" r="6"/>
+              <circle class="ring" cx="50" cy="14" r="6"/><circle class="goal" cx="50" cy="14" r="2.6"/>
+            </svg>
+            <div class="service__text">
+              <h3 class="service__name">Consultoría y estrategia digital</h3>
+            <p class="service__desc">Analizamos dónde está tu negocio hoy y trazamos el camino para crecer en digital, con prioridades claras y pasos concretos.</p>
+            <a class="service__link" href="#contacto" data-service="consultoria">Pide presupuesto <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"/></svg></a>
+            </div>
+          </li>
+          <li class="service">
+            <svg class="svc-icon svc-icon--target" viewBox="0 0 64 64" aria-hidden="true">
+              <circle class="r r3 tint" cx="28" cy="36" r="22"/>
+              <circle class="r r2 tint" cx="28" cy="36" r="14"/>
+              <circle class="r r1" cx="28" cy="36" r="6"/>
+              <circle class="pulse" cx="28" cy="36" r="6"/>
+              <g class="dart"><path d="M29 35 50 14"/><path class="fl" d="M50 14l7.5-1.2-3.6 4.6M50 14l1.2-7.5-4.6 3.6"/></g>
+            </svg>
+            <div class="service__text">
+              <h3 class="service__name">Publicidad digital</h3>
+            <p class="service__desc">Campañas optimizadas en buscadores y redes sociales para impactar a tu target y multiplicar tus conversiones.</p>
+            <a class="service__link" href="#contacto" data-service="publicidad">Pide presupuesto <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"/></svg></a>
+            </div>
+          </li>
+          <li class="service">
+            <svg class="svc-icon svc-icon--social" viewBox="0 0 64 64" aria-hidden="true">
+              <rect class="tint" x="17" y="5" width="26" height="54" rx="5"/>
+              <path d="M27 10h6"/>
+              <rect class="feed" x="21" y="15" width="18" height="13" rx="2"/>
+              <path d="M21 33h14M21 37.5h10M21 42h12"/>
+              <circle class="badge" cx="42" cy="7" r="4"/>
+              <path class="rx rx1" d="M51 33s-6-3.7-6-7.7a3 3 0 0 1 6-1.2 3 3 0 0 1 6 1.2c0 4-6 7.7-6 7.7Z"/>
+              <path class="rx rx2" d="M54 46s-3.6-2.2-3.6-4.6a1.8 1.8 0 0 1 3.6-.7 1.8 1.8 0 0 1 3.6.7c0 2.4-3.6 4.6-3.6 4.6Z"/>
+              <g class="rx rx3"><path class="tint" d="M4 40h10v7H9l-3 2.6V47H4Z"/><path class="dot" d="M7 43.5h.01M9 43.5h.01M11 43.5h.01"/></g>
+            </svg>
+            <div class="service__text">
+              <h3 class="service__name">Contenido en redes sociales</h3>
+            <p class="service__desc">Ideas, textos y publicaciones para tus redes, coherentes con tu marca y pensados para tu público.</p>
+            <a class="service__link" href="#contacto" data-service="redes">Pide presupuesto <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"/></svg></a>
+            </div>
+          </li>
+          <li class="service">
+            <svg class="svc-icon svc-icon--ai" viewBox="0 0 64 64" aria-hidden="true">
+              <path class="links" d="M12 18L32 12M12 18L32 25M12 18L32 39M12 18L32 52M12 32L32 12M12 32L32 25M12 32L32 39M12 32L32 52M12 46L32 12M12 46L32 25M12 46L32 39M12 46L32 52M32 12L52 32M32 25L52 32M32 39L52 32M32 52L52 32"/>
+              <path class="sig s1" pathLength="1" d="M12 18L32 25L52 32"/><path class="sig s2" pathLength="1" d="M12 46L32 39L52 32"/><path class="sig s3" pathLength="1" d="M12 32L32 12L52 32"/>
+              <circle class="n1" cx="12" cy="18" r="3"/><circle class="n1" cx="12" cy="32" r="3"/><circle class="n1" cx="12" cy="46" r="3"/><circle class="n2 n2-1" cx="32" cy="12" r="2.6"/><circle class="n2 n2-2" cx="32" cy="25" r="2.6"/><circle class="n2 n2-3" cx="32" cy="39" r="2.6"/><circle class="n2 n2-4" cx="32" cy="52" r="2.6"/>
+              <circle class="pulse" cx="52" cy="32" r="5"/>
+              <circle class="out" cx="52" cy="32" r="5"/>
+              <path class="spark" d="M56 12c.6 3.4 2 4.8 5.4 5.4-3.4.6-4.8 2-5.4 5.4-.6-3.4-2-4.8-5.4-5.4 3.4-.6 4.8-2 5.4-5.4Z"/>
+            </svg>
+            <div class="service__text">
+              <h3 class="service__name">IA para tu negocio</h3>
+            <p class="service__desc">Inteligencia artificial aplicada a tu día a día: automatizar tareas, atender mejor a tus clientes y ganar tiempo.</p>
+            <a class="service__link" href="#contacto" data-service="ia">Pide presupuesto <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"/></svg></a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============ SOBRE MÍ ============ -->
+    <section class="about" id="sobre-mi" aria-labelledby="sobre-mi-titulo">
+      <div class="container">
+        <div class="about__grid">
+          <figure class="about__media">
+            <img src="assets/img/carlos-gutierrez-dark.jpg" alt="Carlos Gutiérrez, Digital Growth Consultant" width="780" height="1120" loading="lazy">
+          </figure>
+
+          <div class="about__body">
+            <blockquote class="about__quote">
+              <p>“Hoy no buscamos solo un servicio publicitario; buscamos resultados medibles, ingresos reales y sentirnos acompañados en cada paso.”</p>
+            </blockquote>
+
+            <h2 id="sobre-mi-titulo" class="about__name">¡Hola! Soy Carlos Gutiérrez</h2>
+            <p class="about__role">Digital Growth Consultant</p>
+
+            <p class="about__text">Mi objetivo es claro: transformar tus inversiones publicitarias en beneficios tangibles y hacer crecer la rentabilidad de tu negocio.</p>
+            <p class="about__text">Con más de 13 años de experiencia y una sólida formación técnica y estratégica (ESIC e ISDI), ayudo a empresas a escalar con estrategia de funnel completo, optimización de ROI y automatización de marketing.</p>
+
+            <ul class="pillars" aria-label="Mis cuatro pilares">
+              <li>Estrategia</li>
+              <li>Resultados</li>
+              <li>Innovación</li>
+              <li>Creatividad</li>
+            </ul>
+          </div>
+        </div>
+
+        <dl class="stats">
+          <div class="stat">
+            <dt>+13</dt>
+            <dd>años de experiencia</dd>
+          </div>
+          <div class="stat">
+            <dt>+20%</dt>
+            <dd>de mejora en ROAS</dd>
+          </div>
+          <div class="stat">
+            <dt><svg class="stat__icon" viewBox="0 0 48 48" aria-hidden="true"><path d="M27 4 9 27h13l-3 17 20-25H26l1-15Z"/></svg><span class="sr-only">Inmediatez</span></dt>
+            <dd>Inmediatez de respuesta</dd>
+          </div>
+        </dl>
+
+      </div>
+    </section>
+
+    <!-- ============ CONFÍAN EN NOSOTROS ============
+         Para añadir un logo nuevo:
+         1. Guarda la imagen en la carpeta assets/logos/ (por ejemplo: nuevo-cliente.png)
+         2. Copia uno de los bloques <li> ... </li> de abajo, pégalo debajo del último
+         3. Cambia la ruta de la imagen (src), el texto alternativo (alt) y el nombre
+    -->
+    <section class="trust" id="confian" aria-labelledby="confian-titulo">
+      <div class="container">
+        <h2 id="confian-titulo" class="section-title">Confían en HitoGrowth</h2>
+
+        <ul class="logos">
+          <li class="logo">
+            <img src="assets/logos/kandela.png" alt="Logotipo de Kandela" width="548" height="560" loading="lazy">
+            <span class="logo__name">Kandela</span>
+          </li>
+          <li class="logo">
+            <img src="assets/logos/marfil.png" alt="Logotipo de Marfil Tannery" width="1215" height="780" loading="lazy">
+            <span class="logo__name">Marfil Tannery</span>
+          </li>
+          <!-- Nuevo logo: pega aquí un bloque <li class="logo"> ... </li> -->
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============ CONTACTO ============ -->
+    <section class="contact" id="contacto" aria-labelledby="contacto-titulo">
+      <div class="container contact__grid">
+        <div class="contact__intro">
+          <h2 id="contacto-titulo" class="section-title">Hablemos de tu proyecto</h2>
+          <p class="section-lede">Cuéntanos qué necesita tu negocio y te preparamos un presupuesto a medida.</p>
+
+          <ul class="channels">
+            <li>
+              <a class="channel" href="https://wa.me/34696596161" data-whatsapp-link>
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.5 19.5l1.2-3.6A7.8 7.8 0 1 1 8.4 18.6Z"/><path d="M9.2 9.4c.3 2.3 2.4 4.6 5.2 5.3l1.1-1.2-1.7-.9-.7.6c-.9-.4-1.8-1.3-2.2-2.2l.6-.7-.8-1.7Z"/></svg>
+                <span><strong>WhatsApp</strong> <span data-whatsapp-text>+34 696 59 61 61</span></span>
+              </a>
+            </li>
+            <li>
+              <a class="channel" href="mailto:hitogrowth@gmail.com" data-email-link>
+                <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5.5" width="18" height="13" rx="1"/><path d="M3.5 6.5l8.5 7 8.5-7"/></svg>
+                <span><strong>Email</strong> <span data-email-text>hitogrowth@gmail.com</span></span>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="contact__gate">
+          <svg class="contact__kasagi" viewBox="0 0 600 60" preserveAspectRatio="none" aria-hidden="true">
+            <path d="M0 6C150 26 450 26 600 6" />
+            <path d="M0 22C150 40 450 40 600 22" />
+            <path d="M0 46h600" />
+          </svg>
+
+          <form class="form" data-contact-form novalidate>
+            <div class="form__row">
+              <div class="field">
+                <label for="f-nombre">Nombre <span aria-hidden="true">*</span></label>
+                <input id="f-nombre" name="nombre" type="text" autocomplete="name" required aria-describedby="e-nombre">
+                <p class="field__error" id="e-nombre"></p>
+              </div>
+              <div class="field">
+                <label for="f-empresa">Empresa</label>
+                <input id="f-empresa" name="empresa" type="text" autocomplete="organization">
+              </div>
+            </div>
+            <div class="form__row">
+              <div class="field">
+                <label for="f-email">Email <span aria-hidden="true">*</span></label>
+                <input id="f-email" name="email" type="email" autocomplete="email" inputmode="email" required aria-describedby="e-email">
+                <p class="field__error" id="e-email"></p>
+              </div>
+              <div class="field">
+                <label for="f-telefono">Teléfono</label>
+                <input id="f-telefono" name="telefono" type="tel" autocomplete="tel" inputmode="tel">
+              </div>
+            </div>
+            <div class="field">
+              <label for="f-servicio">¿Qué te interesa?</label>
+              <div class="select">
+                <select id="f-servicio" name="servicio">
+                  <option value="">Aún no lo sé, quiero consejo</option>
+                  <option value="web">Desarrollo y diseño web</option>
+                  <option value="consultoria">Consultoría y estrategia digital</option>
+                  <option value="publicidad">Publicidad digital</option>
+                  <option value="redes">Contenido en redes sociales</option>
+                  <option value="ia">IA para tu negocio</option>
+                </select>
+              </div>
+            </div>
+            <div class="field">
+              <label for="f-mensaje">Cuéntanos tu proyecto <span aria-hidden="true">*</span></label>
+              <textarea id="f-mensaje" name="mensaje" rows="4" required aria-describedby="e-mensaje"></textarea>
+              <p class="field__error" id="e-mensaje"></p>
+            </div>
+            <div class="field field--check">
+              <input id="f-privacidad" name="privacidad" type="checkbox" required aria-describedby="e-privacidad">
+              <!-- El enlace a la política de privacidad se configura en script.js (CONFIG.privacidadUrl) -->
+              <label for="f-privacidad">He leído y acepto la <a href="#" data-legal="privacidad">política de privacidad</a>.</label>
+              <p class="field__error" id="e-privacidad"></p>
+            </div>
+
+            <div class="form__actions">
+              <button class="btn btn--primary" type="submit" name="via" value="email">Enviar por email</button>
+              <button class="btn btn--ghost" type="submit" name="via" value="whatsapp">Enviar por WhatsApp</button>
+            </div>
+            <p class="form__status" role="status" data-form-status></p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ PIE DE PÁGINA ============ -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <a class="brand" href="#inicio" aria-label="HitoGrowth, volver arriba">
+        <svg class="brand__mark" viewBox="0 0 32 28" aria-hidden="true">
+          <path d="M1 3.5C10 6.6 22 6.6 31 3.5L30.4 7.6C22 10.2 10 10.2 1.6 7.6Z"/>
+          <rect x="4" y="12.4" width="24" height="2.6"/>
+          <path d="M7.4 8.6h3.1L10.9 28H7Z"/>
+          <path d="M21.5 8.6h3.1L25 28h-3.9Z"/>
+        </svg>
+        <span class="brand__name">HitoGrowth</span>
+      </a>
+      <p class="footer__tag">Consultoría y estrategia digital para pymes.</p>
+      <nav class="footer__links" aria-label="Pie de página">
+        <a href="#servicios">Servicios</a>
+        <a href="#sobre-mi">Sobre mí</a>
+        <a href="#confian">Confían en HitoGrowth</a>
+        <a href="#contacto">Contacto</a>
+        <!-- Estos enlaces aparecen solos cuando rellenas avisoLegalUrl y privacidadUrl en script.js -->
+        <a href="#" data-legal="avisoLegal" data-legal-hide hidden>Aviso legal</a>
+        <a href="#" data-legal="privacidad" data-legal-hide hidden>Privacidad</a>
+      </nav>
+      <p class="footer__copy">© <span data-year>2026</span> HitoGrowth</p>
+    </div>
+  </footer>
+
+  <!-- ============ ASISTENTE (CHATBOT) ============ -->
+  <button class="chat-launcher" type="button" aria-expanded="false" aria-controls="chat" data-chat-toggle>
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5.5h16v10H9.5L5 19.5v-4H4Z"/><path d="M8.5 10.5h.01M12 10.5h.01M15.5 10.5h.01"/></svg>
+    <span class="chat-launcher__label">¿Hablamos?</span>
+  </button>
+
+  <section class="chat" id="chat" role="dialog" aria-modal="false" aria-labelledby="chat-titulo" hidden data-chat>
+    <header class="chat__head">
+      <svg class="brand__mark" viewBox="0 0 32 28" aria-hidden="true">
+        <path d="M1 3.5C10 6.6 22 6.6 31 3.5L30.4 7.6C22 10.2 10 10.2 1.6 7.6Z"/>
+        <rect x="4" y="12.4" width="24" height="2.6"/>
+        <path d="M7.4 8.6h3.1L10.9 28H7Z"/>
+        <path d="M21.5 8.6h3.1L25 28h-3.9Z"/>
+      </svg>
+      <div>
+        <h2 id="chat-titulo" class="chat__title">Asistente HitoGrowth</h2>
+        <p class="chat__sub">Te ayudo a encontrar lo que necesita tu negocio</p>
+      </div>
+      <button class="chat__close" type="button" data-chat-close>
+        <span class="sr-only">Cerrar asistente</span>
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+      </button>
+    </header>
+    <div class="chat__log" role="log" aria-live="polite" data-chat-log></div>
+    <div class="chat__chips" data-chat-chips></div>
+    <form class="chat__form" data-chat-form>
+      <label class="sr-only" for="chat-input">Escribe tu mensaje</label>
+      <input id="chat-input" type="text" autocomplete="off" placeholder="Escribe tu pregunta…" data-chat-input>
+      <button type="submit" class="chat__send">
+        <span class="sr-only">Enviar</span>
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"/></svg>
+      </button>
+    </form>
+  </section>
+
+  <script src="script.js?v=9"></script>
+</body>
+</html>
