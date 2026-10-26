@@ -9,8 +9,8 @@ const CONFIG = {
   whatsappTexto: '+34 696 59 61 61', // cómo se muestra el número en la web
 
   // Enlaces a tus páginas legales. Déjalos vacíos ('') mientras no las tengas.
-  privacidadUrl: '',
-  avisoLegalUrl: ''
+  privacidadUrl: 'privacidad.html',
+  avisoLegalUrl: 'aviso-legal.html'
 };
 
 /* =========================================================
