@@ -1,3 +1,6 @@
+---
+# La portada pasa por Jekyll para poder mostrar los últimos artículos del blog
+---
 <!doctype html>
 <html lang="es">
 <head>
@@ -23,7 +26,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap" rel="stylesheet">
 
   <!-- Si cambias styles.css o script.js, sube el número de "?v=" para que el navegador cargue la versión nueva -->
-  <link rel="stylesheet" href="styles.css?v=13">
+  <link rel="stylesheet" href="styles.css?v=14">
 </head>
 <body>
 
@@ -46,6 +49,7 @@
         <a href="#servicios">Servicios</a>
         <a href="#sobre-mi">Sobre mí</a>
         <a href="#confian">Confían en HitoGrowth</a>
+        {% if site.posts.size > 0 %}<a href="#blog">Blog</a>{% endif %}
         <a href="#contacto">Contacto</a>
         <a class="btn btn--primary btn--sm nav__cta" href="#contacto">Pide presupuesto</a>
       </nav>
@@ -312,6 +316,22 @@
       </div>
     </section>
 
+    <!-- ============ BLOG (aparece solo cuando hay artículos) ============ -->
+    {% if site.posts.size > 0 %}
+    <section class="blog" id="blog" aria-labelledby="blog-titulo">
+      <div class="container">
+        <div class="blog__head">
+          <h2 id="blog-titulo" class="section-title">Blog</h2>
+          <p class="section-lede">Ideas prácticas para hacer crecer tu negocio en digital.</p>
+          <a class="blog__all" href="/blog/">Ver todos los artículos <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"/></svg></a>
+        </div>
+        <div class="post-grid">
+          {% for post in site.posts limit:3 %}{% include post-card.html post=post %}{% endfor %}
+        </div>
+      </div>
+    </section>
+    {% endif %}
+
     <!-- ============ CONTACTO ============ -->
     <section class="contact" id="contacto" aria-labelledby="contacto-titulo">
       <div class="container contact__grid">
@@ -417,6 +437,7 @@
         <a href="#servicios">Servicios</a>
         <a href="#sobre-mi">Sobre mí</a>
         <a href="#confian">Confían en HitoGrowth</a>
+        {% if site.posts.size > 0 %}<a href="/blog/">Blog</a>{% endif %}
         <a href="#contacto">Contacto</a>
         <a href="aviso-legal.html">Aviso legal</a>
         <a href="privacidad.html">Privacidad</a>

@@ -1,0 +1,31 @@
+# Configuración del editor del blog (Sveltia CMS)
+backend:
+  name: github
+  repo: hitogrowth/hitogrowth-web
+  branch: main
+
+locale: es
+site_url: https://hitogrowth.com
+display_url: https://hitogrowth.com
+
+# Dónde se guardan las imágenes que subas
+media_folder: assets/blog
+public_folder: /assets/blog
+
+collections:
+  - name: posts
+    label: Artículos del blog
+    label_singular: Artículo
+    folder: _posts
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    summary: "{{title}}"
+    sortable_fields: [date, title]
+    fields:
+      - { label: "Título", name: title, widget: string }
+      - { label: "Fecha de publicación", name: date, widget: datetime, time_format: false, format: "YYYY-MM-DD" }
+      - { label: "Resumen (1-2 frases: sale en Google y en la portada)", name: description, widget: text }
+      - { label: "Categoría", name: category, widget: select, options: ["Web", "Estrategia", "Publicidad", "Redes sociales", "IA"] }
+      - { label: "Imagen de portada", name: image, widget: image, required: false }
+      - { label: "Descripción de la imagen (para Google y accesibilidad)", name: image_alt, widget: string, required: false }
+      - { label: "Texto del artículo", name: body, widget: markdown }

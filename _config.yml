@@ -1,0 +1,28 @@
+# Configuración de la web (GitHub Pages genera el blog con esto)
+title: HitoGrowth
+description: Consultoría y estrategia digital para pymes.
+url: https://hitogrowth.com
+lang: es
+timezone: Europe/Madrid
+
+# Dirección de cada artículo: hitogrowth.com/blog/titulo-del-articulo/
+permalink: /blog/:title/
+
+markdown: kramdown
+kramdown:
+  input: GFM
+
+plugins:
+  - jekyll-sitemap
+
+# Todos los artículos usan la plantilla "post"
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+
+exclude:
+  - .gitignore
+  - README.md

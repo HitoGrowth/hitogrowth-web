@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="es">
+<head>
+{% include head.html %}
+</head>
+<body class="blog-page">
+{% include site-nav.html %}
+  <main>
+    <article class="post container">
+      <header class="post__head">
+        <a class="post__back" href="/blog/">← Todos los artículos</a>
+        <h1 class="post__title">{{ page.title }}</h1>
+        {%- assign palabras = content | number_of_words -%}
+        {%- assign minutos = palabras | divided_by: 200 -%}
+        {%- if minutos < 1 %}{% assign minutos = 1 %}{% endif %}
+        <p class="post__meta">{% if page.category %}{{ page.category }} · {% endif %}{% include fecha.html date=page.date %} · {{ minutos }} min de lectura</p>
+      </header>
+      {%- if page.image %}
+      <figure class="post__cover"><img src="{{ page.image | relative_url }}" alt="{{ page.image_alt | default: page.title | escape }}"></figure>
+      {%- endif %}
+      <div class="prose">
+        {{ content }}
+      </div>
+      <aside class="post-cta">
+        <h2 class="post-cta__title">¿Hablamos de tu negocio?</h2>
+        <p>La primera consulta es gratuita y sin compromiso: analizamos tu presencia digital y detectamos oportunidades reales de crecimiento.</p>
+        <a class="btn btn--primary" href="/#contacto">Pide presupuesto</a>
+      </aside>
+    </article>
+  </main>
+{% include site-footer.html %}
+</body>
+</html>

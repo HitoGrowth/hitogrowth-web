@@ -1,0 +1,10 @@
+  <header class="legal-nav">
+    <div class="container legal-nav__inner">
+      <a class="brand" href="/" aria-label="HitoGrowth, volver al inicio">{% include torii.html %}<span class="brand__name">HitoGrowth</span></a>
+      <nav class="legal-nav__links" aria-label="Principal">
+        <a href="/#servicios">Servicios</a>
+        <a href="/blog/"{% if page.url == '/blog/' %} aria-current="page"{% endif %}>Blog</a>
+        <a class="btn btn--primary btn--sm" href="/#contacto">Pide presupuesto</a>
+      </nav>
+    </div>
+  </header>

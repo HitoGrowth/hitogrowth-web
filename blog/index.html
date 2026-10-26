@@ -1,0 +1,29 @@
+---
+title: Blog
+description: Ideas prácticas de marketing digital, publicidad, redes sociales e IA para hacer crecer tu negocio.
+---
+<!doctype html>
+<html lang="es">
+<head>
+{% include head.html %}
+</head>
+<body class="blog-page">
+{% include site-nav.html %}
+  <main class="container blog-list">
+    <h1 class="section-title">Blog</h1>
+    <p class="section-lede">Ideas prácticas de marketing digital, publicidad, redes sociales e IA para hacer crecer tu negocio.</p>
+    {% if site.posts.size > 0 %}
+    <div class="post-grid">
+      {% for post in site.posts %}{% include post-card.html post=post %}{% endfor %}
+    </div>
+    {% else %}
+    <div class="blog-empty">
+      {% include torii.html %}
+      <p>Muy pronto publicaremos los primeros artículos.</p>
+      <a class="btn btn--primary" href="/#contacto">Mientras tanto, hablemos</a>
+    </div>
+    {% endif %}
+  </main>
+{% include site-footer.html %}
+</body>
+</html>
