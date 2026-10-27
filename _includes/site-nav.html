@@ -1,10 +1,34 @@
-  <header class="legal-nav">
-    <div class="container legal-nav__inner">
-      <a class="brand" href="/" aria-label="HitoGrowth, volver al inicio">{% include torii.html %}<span class="brand__name">HitoGrowth</span></a>
-      <nav class="legal-nav__links" aria-label="Principal">
+  <!-- Menú de las páginas del blog y legales: mismos apartados que la portada -->
+  <header class="nav is-solid" data-nav>
+    <div class="nav__inner">
+      <a class="brand" href="/" aria-label="HitoGrowth, ir al inicio">{% include torii.html %}<span class="brand__name">HitoGrowth</span></a>
+      <nav class="nav__links" id="menu" aria-label="Principal">
         <a href="/#servicios">Servicios</a>
-        <a href="/blog/"{% if page.url == '/blog/' %} aria-current="page"{% endif %}>Blog</a>
-        <a class="btn btn--primary btn--sm" href="/#contacto">Pide presupuesto</a>
+        <a href="/#sobre-mi">Sobre mí</a>
+        <a href="/#confian">Confían en HitoGrowth</a>
+        <a href="/blog/"{% if page.url contains '/blog/' %} aria-current="page"{% endif %}>Blog</a>
+        <a href="/#contacto">Contacto</a>
+        <a class="btn btn--primary btn--sm nav__cta" href="/#contacto">Pide presupuesto</a>
       </nav>
+      <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="menu" data-menu-toggle>
+        <span class="sr-only">Abrir menú</span>
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path class="l1" d="M3 7h18"/><path class="l2" d="M3 12h18"/><path class="l3" d="M3 17h18"/></svg>
+      </button>
     </div>
   </header>
+  <script>
+    (function () {
+      var menu = document.getElementById('menu');
+      var toggle = document.querySelector('[data-menu-toggle]');
+      function setMenu(open) {
+        menu.classList.toggle('is-open', open);
+        toggle.setAttribute('aria-expanded', String(open));
+        toggle.querySelector('.sr-only').textContent = open ? 'Cerrar menú' : 'Abrir menú';
+        document.body.classList.toggle('menu-open', open);
+      }
+      toggle.addEventListener('click', function () { setMenu(!menu.classList.contains('is-open')); });
+      menu.querySelectorAll('a').forEach(function (a) { a.addEventListener('click', function () { setMenu(false); }); });
+      document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && menu.classList.contains('is-open')) { setMenu(false); toggle.focus(); } });
+      window.matchMedia('(min-width: 1081px)').addEventListener('change', function (e) { if (e.matches) setMenu(false); });
+    })();
+  </script>

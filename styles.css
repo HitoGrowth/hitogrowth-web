@@ -976,3 +976,10 @@ p, li, dd, blockquote { text-wrap: pretty; }
 .post-cta { margin-top: clamp(3rem, 6vw, 4.5rem); padding-top: 2rem; border-top: 1px solid var(--line-strong); display: grid; gap: 1rem; justify-items: start; }
 .post-cta__title { font-family: var(--font-display); font-stretch: 112%; font-weight: 800; font-size: 1.5rem; text-transform: uppercase; }
 .post-cta p { color: var(--text-dim); max-width: 52ch; }
+
+/* Menú completo en páginas del blog y legales (cabecera fija, ya sólida) */
+.blog-page, .legal-page { padding-top: var(--nav-h); }
+.nav__links a[aria-current="page"]:not(.btn) { color: var(--mint); }
+@media (min-width: 1081px) {
+  .nav__links a[aria-current="page"]:not(.btn)::after { transform: scaleX(1); }
+}
