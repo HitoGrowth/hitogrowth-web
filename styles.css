@@ -983,3 +983,41 @@ p, li, dd, blockquote { text-wrap: pretty; }
 @media (min-width: 1081px) {
   .nav__links a[aria-current="page"]:not(.btn)::after { transform: scaleX(1); }
 }
+
+/* ============ AVISO DE COOKIES ============ */
+.cookies {
+  position: fixed; z-index: 70;
+  left: max(1rem, env(safe-area-inset-left)); bottom: max(1rem, env(safe-area-inset-bottom));
+  width: min(420px, calc(100vw - 2rem));
+  display: grid; gap: 1rem; padding: 1.25rem 1.25rem 1.1rem;
+  background: var(--ink-2); color: var(--text);
+  border: 1px solid var(--line-strong); border-radius: 14px;
+  box-shadow: 0 28px 60px -16px rgba(0, 0, 0, .75), 0 4px 14px rgba(0, 0, 0, .3);
+  animation: cookies-in .5s var(--ease-out) both;
+}
+.cookies[hidden] { display: none; }
+.cookies__text { font-size: .92rem; line-height: 1.6; }
+.cookies__text a { color: var(--mint); }
+.cookies__actions { display: grid; grid-template-columns: 1fr 1fr; gap: .6rem; }
+/* Los dos botones son iguales a propósito: la ley pide que rechazar sea tan fácil como aceptar */
+.cookies__btn {
+  min-height: 44px; padding: 0 1rem;
+  font-family: var(--font-display); font-stretch: 112%; font-weight: 700;
+  font-size: .78rem; letter-spacing: .08em; text-transform: uppercase;
+  background: transparent; color: var(--white);
+  border: 1px solid var(--mint); border-radius: 999px; cursor: pointer;
+  transition: background-color .2s ease, color .2s ease, transform .16s var(--ease-out);
+}
+.cookies__btn:active { transform: scale(.97); }
+.cookies__btn:focus-visible { outline: 2px solid var(--mint); outline-offset: 3px; }
+@media (hover: hover) and (pointer: fine) {
+  .cookies__btn:hover { background: var(--mint); color: var(--ink); }
+}
+@keyframes cookies-in { from { opacity: 0; transform: translateY(12px); } }
+@media (prefers-reduced-motion: reduce) { .cookies { animation: none; } }
+
+.footer__links button {
+  padding: 0; background: none; border: 0; cursor: pointer;
+  font: inherit; color: var(--text-dim); transition: color .2s;
+}
+.footer__links button:hover { color: var(--mint); }

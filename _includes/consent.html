@@ -1,0 +1,79 @@
+<!-- ============ AVISO DE COOKIES + GOOGLE ANALYTICS ============
+     Analytics solo se carga si el visitante pulsa "Aceptar".
+     Para cambiar de cuenta de Analytics, cambia el ID de abajo (G-...). -->
+<div class="cookies" role="region" aria-label="Aviso de cookies" hidden data-cookies>
+  <p class="cookies__text">Usamos cookies de Google Analytics para saber cuántas personas visitan la web y mejorarla. Solo se activan si las aceptas. <a href="/cookies.html">Más información</a></p>
+  <div class="cookies__actions">
+    <button class="cookies__btn" type="button" data-cookies-choice="denied">Rechazar</button>
+    <button class="cookies__btn" type="button" data-cookies-choice="granted">Aceptar</button>
+  </div>
+</div>
+<script>
+(function () {
+  var GA_ID = 'G-38LH28G5NW';
+  var KEY = 'hg-cookies';
+  var banner = document.querySelector('[data-cookies]');
+  var loaded = false;
+
+  window.dataLayer = window.dataLayer || [];
+  function gtag() { dataLayer.push(arguments); }
+  window.gtag = gtag;
+  gtag('consent', 'default', {
+    analytics_storage: 'denied', ad_storage: 'denied',
+    ad_user_data: 'denied', ad_personalization: 'denied'
+  });
+
+  function read() { try { return localStorage.getItem(KEY); } catch (e) { return null; } }
+  function save(v) { try { localStorage.setItem(KEY, v); } catch (e) {} }
+
+  function loadAnalytics() {
+    if (loaded) return;
+    loaded = true;
+    gtag('consent', 'update', { analytics_storage: 'granted' });
+    gtag('js', new Date());
+    gtag('config', GA_ID);
+    var s = document.createElement('script');
+    s.async = true;
+    s.src = 'https://www.googletagmanager.com/gtag/js?id=' + GA_ID;
+    document.head.appendChild(s);
+  }
+
+  function removeAnalyticsCookies() {
+    var host = location.hostname.replace(/^www\./, '');
+    document.cookie.split(';').forEach(function (c) {
+      var name = c.split('=')[0].trim();
+      if (/^_ga/.test(name)) {
+        ['', '; domain=' + host, '; domain=.' + host].forEach(function (d) {
+          document.cookie = name + '=; Max-Age=0; path=/' + d;
+        });
+      }
+    });
+  }
+
+  function show() { banner.hidden = false; }
+  function hide() { banner.hidden = true; }
+
+  banner.addEventListener('click', function (e) {
+    var btn = e.target.closest('[data-cookies-choice]');
+    if (!btn) return;
+    var choice = btn.getAttribute('data-cookies-choice');
+    var before = read();
+    save(choice);
+    hide();
+    if (choice === 'granted') {
+      loadAnalytics();
+    } else if (before === 'granted' || loaded) {
+      removeAnalyticsCookies();
+      location.reload();
+    }
+  });
+
+  document.addEventListener('click', function (e) {
+    if (e.target.closest('[data-cookies-settings]')) { e.preventDefault(); show(); }
+  });
+
+  var stored = read();
+  if (stored === 'granted') loadAnalytics();
+  else if (stored !== 'denied') show();
+})();
+</script>

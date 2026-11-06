@@ -24,7 +24,7 @@
   <link rel="stylesheet" href="/assets/fonts/fonts.css">
 
   <!-- Si cambias styles.css o script.js, sube el número de "?v=" para que el navegador cargue la versión nueva -->
-  <link rel="stylesheet" href="styles.css?v=17">
+  <link rel="stylesheet" href="styles.css?v=18">
 </head>
 <body>
 
@@ -439,6 +439,8 @@
         <a href="#contacto">Contacto</a>
         <a href="aviso-legal.html">Aviso legal</a>
         <a href="privacidad.html">Privacidad</a>
+        <a href="cookies.html">Cookies</a>
+        <button type="button" data-cookies-settings>Configurar cookies</button>
       </nav>
       <p class="footer__copy">© <span data-year>2026</span> HitoGrowth</p>
     </div>
@@ -480,5 +482,6 @@
   </section>
 
   <script src="script.js?v=10"></script>
+{% include consent.html %}
 </body>
 </html>

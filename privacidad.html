@@ -6,17 +6,17 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>Política de privacidad · HitoGrowth</title>
-  <meta name="description" content="Política de privacidad y cookies de HitoGrowth.">
+  <meta name="description" content="Política de privacidad de HitoGrowth.">
   <meta name="theme-color" content="#08110D">
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="/assets/fonts/fonts.css">
-  <link rel="stylesheet" href="styles.css?v=17">
+  <link rel="stylesheet" href="styles.css?v=18">
 </head>
 <body class="legal-page">
 {% include site-nav.html %}
   <main class="container legal">
     <h1 class="section-title">Política de privacidad</h1>
-    <p class="legal__updated">Última actualización: 31 de octubre de 2026</p>
+    <p class="legal__updated">Última actualización: 6 de noviembre de 2026</p>
 
     <p>En HitoGrowth cuidamos tus datos personales. Esta política explica, de forma clara, qué datos recogemos, para qué y cuáles son tus derechos, conforme al Reglamento General de Protección de Datos (RGPD) y la Ley Orgánica 3/2018 (LOPDGDD).</p>
 
@@ -33,16 +33,18 @@
     <h2>2. Qué datos tratamos</h2>
     <p>Solo los que tú nos facilitas al contactar a través del formulario, el asistente de la web, el correo electrónico o WhatsApp: nombre, empresa, email, teléfono, el servicio que te interesa y el mensaje que escribas.</p>
     <p>El formulario y el asistente de esta web <strong>no guardan tus datos en ningún servidor</strong>: al enviarlos, se abre tu programa de correo o WhatsApp con el mensaje preparado, y eres tú quien decide enviarlo.</p>
+    <p>Además, <strong>solo si aceptas las cookies analíticas</strong>, recogemos datos estadísticos de navegación con Google Analytics: páginas visitadas, tiempo en la web, tipo de dispositivo y navegador, ubicación aproximada (ciudad o país) y desde dónde llegas. No sirven para identificarte y Google Analytics no almacena tu dirección IP.</p>
 
     <h2>3. Para qué los usamos</h2>
     <ul>
       <li>Responder a tu consulta y prepararte un presupuesto.</li>
       <li>Mantener la comunicación necesaria si llegamos a trabajar juntos.</li>
+      <li>Si lo aceptas, conocer de forma estadística cómo se usa la web para mejorarla.</li>
     </ul>
     <p>No usamos tus datos para enviarte publicidad sin tu permiso ni tomamos decisiones automatizadas con ellos.</p>
 
     <h2>4. Base legal</h2>
-    <p>Tu <strong>consentimiento</strong>, que das al marcar la casilla del formulario o al escribirnos, y la aplicación de <strong>medidas precontractuales</strong> que tú solicitas, como la elaboración de un presupuesto.</p>
+    <p>Tu <strong>consentimiento</strong>, que das al marcar la casilla del formulario, al escribirnos o al aceptar las cookies analíticas, y la aplicación de <strong>medidas precontractuales</strong> que tú solicitas, como la elaboración de un presupuesto.</p>
 
     <h2>5. Cuánto tiempo los conservamos</h2>
     <p>Mientras dure la relación o la conversación y, después, durante los plazos que exija la ley (por ejemplo, obligaciones fiscales). Si no llegamos a trabajar juntos, eliminamos tus datos en un plazo máximo de 12 meses o antes si lo pides.</p>
@@ -51,6 +53,7 @@
     <p>No vendemos ni cedemos tus datos. Para funcionar usamos estos proveedores, que pueden tratar datos fuera del Espacio Económico Europeo con las garantías previstas en el RGPD (como cláusulas contractuales tipo o el Marco de Privacidad de Datos UE-EE. UU.):</p>
     <ul>
       <li><strong>Google</strong> (Gmail), para el correo electrónico.</li>
+      <li><strong>Google</strong> (Google Analytics), para las estadísticas de visitas, solo si aceptas las cookies analíticas.</li>
       <li><strong>Meta</strong> (WhatsApp), si nos escribes por WhatsApp.</li>
       <li><strong>GitHub</strong> (Microsoft), que aloja esta web.</li>
       <li><strong>Cloudflare</strong>, que gestiona el dominio.</li>
@@ -61,7 +64,7 @@
     <p>Si consideras que no hemos atendido bien tu solicitud, puedes presentar una reclamación ante la Agencia Española de Protección de Datos (<a href="https://www.aepd.es" target="_blank" rel="noopener">www.aepd.es</a>).</p>
 
     <h2 id="cookies">8. Cookies</h2>
-    <p>Esta web <strong>no utiliza cookies propias ni de terceros</strong> con fines analíticos o publicitarios, por eso no te mostramos un aviso de cookies. Las tipografías y el resto de recursos se sirven desde la propia web, sin conectar con servicios de terceros. Si en el futuro añadimos herramientas que las usen (por ejemplo, analítica), actualizaremos esta política y te pediremos permiso antes de activarlas.</p>
+    <p>Esta web usa cookies de Google Analytics <strong>solo si las aceptas</strong> en el aviso que aparece al entrar. Puedes cambiar tu elección cuando quieras desde el enlace «Configurar cookies» del pie de página. Tienes todos los detalles en la <a href="cookies.html">política de cookies</a>.</p>
 
     <h2>9. Cambios en esta política</h2>
     <p>Podemos actualizar esta política para adaptarla a cambios legales o de los servicios. La fecha de la última actualización aparece al principio.</p>
@@ -73,9 +76,12 @@
         <a href="./">Inicio</a>
         <a href="aviso-legal.html">Aviso legal</a>
         <a href="privacidad.html">Privacidad</a>
+        <a href="cookies.html">Cookies</a>
+        <button type="button" data-cookies-settings>Configurar cookies</button>
       </nav>
       <p class="footer__copy">© 2026 HitoGrowth</p>
     </div>
   </footer>
+{% include consent.html %}
 </body>
 </html>
