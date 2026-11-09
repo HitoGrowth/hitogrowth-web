@@ -3,11 +3,9 @@ title: 'Black Friday para pymes: cómo vender sin regalar margen'
 date: 2026-11-09
 description: 'Plan de 3 fases para tu Black Friday: calienta a tu audiencia, lanza ofertas del 23 al 30 de noviembre y fideliza después. Para tiendas y servicios.'
 category: Publicidad
-image: /assets/blog/HitoGrowth-black-friday.jpg
-image_alt: black-friday-pymes-plan-ventas
+image: /assets/blog/Gemini_Generated_Image_8h3u6b8h3u6b8h3u.jpeg
+image_alt: Compra con etiquetas de descuento de Black Friday
 ---
-
-## Black Friday para pymes: cómo vender sin regalar margen
 
 El Black Friday es como las rebajas de enero, pero con más adrenalina y menos paciencia. Y aquí viene la mala noticia: si no tienes plan, vas a competir con grandes marcas a golpe de descuento. Y ahí pierdes.
 
