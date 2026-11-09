@@ -3,7 +3,7 @@ title: 5 errores en la web de una pyme que te hacen perder clientes
 date: 2026-10-27
 description: Web lenta, sin versión móvil, sin llamada a la acción… Descubre los 5 errores web que hacen perder clientes a una pyme y cómo corregirlos hoy mismo.
 category: Web
-image: /assets/blog/Hito Growth_Auditoría_web.jpg
+image: /assets/blog/auditoria-web-pyme.jpg
 image_alt: Hito_Growth_Auditoría_desarrollo_web
 ---
 

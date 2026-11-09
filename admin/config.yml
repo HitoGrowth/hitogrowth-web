@@ -8,6 +8,12 @@ locale: es
 site_url: https://hitogrowth.com
 display_url: https://hitogrowth.com
 
+# Direcciones de los artículos sin tildes, eñes ni símbolos (cómo -> como)
+slug:
+  encoding: ascii
+  clean_accents: true
+  sanitize_replacement: "-"
+
 # Dónde se guardan las imágenes que subas
 media_folder: assets/blog
 public_folder: /assets/blog
