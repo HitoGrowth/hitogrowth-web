@@ -140,7 +140,9 @@ function updateHero() {
   const light = p < 0.38 ? 0 : easeOut(clamp01((p - 0.38) / 0.4)) * 0.96;
   const field = easeOut(clamp01((p - 0.8) / 0.18));
 
-  hero.style.setProperty('--s', s.toFixed(4));
+  hero.style.setProperty('--s', p === 0 ? '1' : s.toFixed(4));
+  hero.classList.toggle('is-crossing', p > 0 && p < 0.82);
+  hero.classList.toggle('is-through', p >= 0.82);
   const fade = clamp01(1 - p * 3.4);
   hero.style.setProperty('--fade', fade.toFixed(3));
   heroContent.style.visibility = heroHint.style.visibility = fade <= 0.02 ? 'hidden' : '';
@@ -153,6 +155,8 @@ function onScroll() {
 }
 window.addEventListener('scroll', onScroll, { passive: true });
 window.addEventListener('resize', onScroll);
+// Al volver a la página con "atrás" el navegador la restaura tal cual: recalculamos
+window.addEventListener('pageshow', updateHero);
 updateHero();
 
 /* ---------- Portada: motas de luz ---------- */
