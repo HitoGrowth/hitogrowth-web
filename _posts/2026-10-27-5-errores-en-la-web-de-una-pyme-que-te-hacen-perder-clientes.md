@@ -7,8 +7,6 @@ image: /assets/blog/auditoria-web-pyme.jpg
 image_alt: Hito_Growth_Auditoría_desarrollo_web
 ---
 
-## 5 errores en la web de una pyme que te hacen perder clientes
-
 Tu web trabaja 24 horas al día, sin vacaciones ni café. Pero si falla en lo básico, trabaja para la competencia.
 
 Un análisis de BeeDIGITAL AI sobre más de dos millones de pymes españolas concluye que una de cada dos tiene al menos un error grave en su web. Lo bueno: casi todos se arreglan sin rehacerla entera.
