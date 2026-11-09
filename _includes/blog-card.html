@@ -1,0 +1,23 @@
+{%- assign palabras = include.post.content | strip_html | number_of_words -%}
+{%- assign minutos = palabras | divided_by: 200 -%}
+{%- if minutos < 1 %}{% assign minutos = 1 %}{% endif -%}
+<article class="bl-card" data-category="{{ include.post.category | escape }}">
+  <a class="bl-card__link" href="{{ include.post.url | relative_url }}">
+    <div class="bl-card__img">
+      {%- if include.post.image -%}
+      <img src="{{ include.post.image | relative_url }}" alt="{{ include.post.image_alt | default: include.post.title | escape }}" loading="lazy">
+      {%- else -%}
+      <span class="bl-card__placeholder">{% include torii.html %}</span>
+      {%- endif -%}
+    </div>
+    <div class="bl-card__body">
+      <p class="bl-card__time"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></svg>Léelo en {{ minutos }} min</p>
+      <h2 class="bl-card__title">{{ include.post.title }}</h2>
+      <p class="bl-card__date">Publicado el {% include fecha.html date=include.post.date %}</p>
+      <p class="bl-card__excerpt">{{ include.post.description | default: include.post.excerpt | strip_html | strip_newlines | truncate: 190 }}</p>
+      {%- if include.post.category %}
+      <span class="bl-card__tag">{{ include.post.category }}</span>
+      {%- endif %}
+    </div>
+  </a>
+</article>
