@@ -3,16 +3,12 @@
   include.servicio: web | consultoria | publicidad | redes | ia (o vacío)
   include.titulo / include.texto: textos de la izquierda
 {%- endcomment -%}
-{%- assign pp_v = include.servicio | default: 'general' -%}
 {%- assign pp_s = nil -%}
 {%- if include.servicio and include.servicio != '' %}{% assign pp_s = site.pages | where: "servicio_id", include.servicio | first %}{% endif -%}
 {%- if pp_s %}{% assign pp_wa = 'Hola, me interesa el servicio de ' | append: pp_s.nombre | append: '.' %}{% else %}{% assign pp_wa = 'Hola, me gustaría información sobre los servicios de HitoGrowth.' %}{% endif %}
 <section class="contact pp" id="presupuesto" aria-labelledby="pp-titulo">
   <div class="container contact__grid">
     <div class="contact__intro">
-      {%- unless include.sin_torii %}
-      <div class="pp__torii" data-pp-torii>{% include torii-servicio.html v=pp_v %}</div>
-      {%- endunless %}
       <h2 id="pp-titulo" class="section-title">{{ include.titulo | default: 'Pide presupuesto' }}</h2>
       <p class="section-lede">{{ include.texto | default: 'Cuéntame tu caso y te respondo con los siguientes pasos. Sin compromiso.' }}</p>
       <ul class="channels">
@@ -89,4 +85,4 @@
     </div>
   </div>
 </section>
-<script src="/presupuesto.js?v=1" defer></script>
+<script src="/presupuesto.js?v=2" defer></script>

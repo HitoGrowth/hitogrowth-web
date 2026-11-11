@@ -96,9 +96,6 @@
     </div>
   </section>
 
-  <!-- ============ PIDE PRESUPUESTO (formulario propio) ============ -->
-  {% include presupuesto.html sin_torii=true servicio=page.servicio_id titulo=page.cta texto="Cuéntame tu caso y te respondo con los siguientes pasos. Sin compromiso." %}
-
   <!-- ============ OTROS SERVICIOS ============ -->
   <nav class="sv-others" aria-labelledby="otros-titulo">
     <div class="container">
@@ -113,6 +110,9 @@
       </ul>
     </div>
   </nav>
+
+  <!-- ============ PIDE PRESUPUESTO (formulario propio) ============ -->
+  {% include presupuesto.html servicio=page.servicio_id titulo=page.cta texto="Cuéntame tu caso y te respondo con los siguientes pasos. Sin compromiso." %}
 
   <!-- ============ PREGUNTAS FRECUENTES ============ -->
   <section class="sv-faq" aria-labelledby="faq-titulo">

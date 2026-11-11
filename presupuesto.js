@@ -65,8 +65,8 @@
     }
   });
 
-  /* El torii se dibuja y el travesaño del formulario aparece al llegar a la sección */
-  const els = document.querySelectorAll('[data-pp-torii], #presupuesto .contact__gate');
+  /* El travesaño del formulario aparece al llegar a la sección */
+  const els = document.querySelectorAll('#presupuesto .contact__gate');
   if (!('IntersectionObserver' in window)) { els.forEach((el) => el.classList.add('is-in')); return; }
   document.documentElement.classList.add('can-reveal');
   const io = new IntersectionObserver((entries) => {
