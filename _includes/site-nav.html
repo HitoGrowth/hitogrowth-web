@@ -3,12 +3,19 @@
     <div class="nav__inner">
       <a class="brand" href="/" aria-label="HitoGrowth, ir al inicio">{% include torii.html %}<span class="brand__name">HitoGrowth</span></a>
       <nav class="nav__links" id="menu" aria-label="Principal">
-        <a href="/#servicios">Servicios</a>
+        <div class="nav__group">
+          <a href="/#servicios"{% if page.url contains '/servicios/' %} aria-current="page"{% endif %}>Servicios<svg class="nav__chev" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></a>
+          {% include nav-menu.html tipo="servicios" %}
+        </div>
         <a href="/#sobre-mi">Sobre mí</a>
         <a href="/#confian">Confían en HitoGrowth</a>
-        <a href="/blog/"{% if page.url contains '/blog/' %} aria-current="page"{% endif %}>Blog</a>
-        <a href="/#contacto">Contacto</a>
-        <a class="btn btn--primary btn--sm nav__cta" href="/#contacto">Pide presupuesto</a>
+        <div class="nav__group">
+          <a href="/blog/"{% if page.url contains '/blog/' %} aria-current="page"{% endif %}>Blog<svg class="nav__chev" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></a>
+          {% include nav-menu.html tipo="blog" %}
+        </div>
+        {%- if page.layout == 'servicio' or page.layout == 'post' or page.url == '/blog/' %}{% assign ir_contacto = '#presupuesto' %}{% else %}{% assign ir_contacto = '/#contacto' %}{% endif %}
+        <a href="{{ ir_contacto }}">Contacto</a>
+        <a class="btn btn--primary btn--sm nav__cta" href="{{ ir_contacto }}">Pide presupuesto</a>
       </nav>
       <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="menu" data-menu-toggle>
         <span class="sr-only">Abrir menú</span>

@@ -274,6 +274,11 @@ const form = $('[data-contact-form]');
 $$('[data-service]').forEach((link) => {
   link.addEventListener('click', () => { form.servicio.value = link.dataset.service; });
 });
+// Desde la página de un servicio se llega con ?servicio=web (o el que sea) ya elegido
+(function preselectService() {
+  const id = new URLSearchParams(location.search).get('servicio');
+  if (id && SERVICES.some((s) => s.id === id)) form.servicio.value = id;
+})();
 
 /* ---------- Formulario de contacto ---------- */
 const formStatus = $('[data-form-status]');

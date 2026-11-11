@@ -1,0 +1,62 @@
+{%- comment -%}
+  Torii del formulario de presupuesto. include.v = web | consultoria | publicidad | redes | ia | general
+  La estructura del torii es siempre la misma; lo que cambia es lo que se ve a través de la puerta.
+{%- endcomment -%}
+<svg class="pp-torii pp-torii--{{ include.v }}" viewBox="0 0 400 340" aria-hidden="true">
+  <g class="pp-torii__gate">
+    <path pathLength="1" d="M8 38C118 62 282 62 392 38L385 62C282 82 118 82 15 62Z"/>
+    <path pathLength="1" d="M36 72h328v13H36Z"/>
+    <path pathLength="1" d="M182 85h36v35h-36Z"/>
+    <path pathLength="1" d="M28 120h344v14H28Z"/>
+    <path pathLength="1" d="M86 85h20l6 247H80Z"/>
+    <path pathLength="1" d="M294 85h20l6 247h-32Z"/>
+    <path class="pp-torii__ground" pathLength="1" d="M40 332h320"/>
+  </g>
+  <g class="pp-torii__motif">
+  {%- case include.v -%}
+  {%- when 'web' %}
+    <rect x="128" y="160" width="144" height="110" rx="7"/>
+    <path d="M128 180h144"/>
+    <circle class="f" cx="140" cy="170" r="2.6"/><circle class="f" cx="150" cy="170" r="2.6"/><circle class="f" cx="160" cy="170" r="2.6"/>
+    <rect class="tint web-blk" x="140" y="192" width="52" height="44" rx="3"/>
+    <path class="web-ln" d="M204 198h52"/><path class="web-ln web-ln2" d="M204 212h38"/><path class="web-ln web-ln3" d="M204 226h46"/>
+    <rect class="web-btn" x="204" y="244" width="34" height="13" rx="6.5"/>
+    <path class="f web-cur" d="M232 250v34l8-8 7 15 6-3-7-14h11Z"/>
+  {%- when 'consultoria' %}
+    <path class="alt" d="M136 304H264V176"/>
+    <circle class="f gd" cx="200" cy="304" r="2.4"/><circle class="f gd" cx="264" cy="304" r="2.4"/><circle class="f gd" cx="264" cy="240" r="2.4"/><circle class="f gd" cx="136" cy="176" r="2.4"/>
+    <path class="route" pathLength="1" d="M136 304v-64h64v-64h64"/>
+    <circle class="nd" cx="136" cy="240" r="6"/><circle class="nd" cx="200" cy="240" r="6"/><circle class="nd" cx="200" cy="176" r="6"/>
+    <circle class="f" cx="136" cy="304" r="8"/>
+    <circle class="goal-pulse" cx="264" cy="176" r="14"/>
+    <circle class="tint" cx="264" cy="176" r="14"/><circle class="f" cx="264" cy="176" r="6"/>
+  {%- when 'publicidad' %}
+    <circle class="ad-r ad-r1" cx="196" cy="240" r="68"/>
+    <circle class="ad-r ad-r2" cx="196" cy="240" r="46"/>
+    <circle class="tint ad-r ad-r3" cx="196" cy="240" r="24"/>
+    <circle class="f" cx="196" cy="240" r="7"/>
+    <g class="ad-dart">
+      <path d="M196 240l64-62"/>
+      <path class="f" d="M260 178l18-4-9 13Z"/><path class="f" d="M260 178l4-18-13 9Z"/>
+    </g>
+  {%- when 'redes' %}
+    <rect x="160" y="148" width="80" height="156" rx="13"/>
+    <path d="M190 160h20"/>
+    <rect class="tint" x="170" y="176" width="60" height="50" rx="4"/>
+    <path d="M170 240h48M170 254h34M170 268h42"/>
+    <path class="f rs-heart" d="M264 210c-13-8-18-18-12-24 4-4 10-3 12 2 2-5 8-6 12-2 6 6 1 16-12 24Z"/>
+    <path class="f rs-heart rs-heart2" d="M262 250c-9-6-12-12-8-16 3-3 7-2 8 1 1-3 5-4 8-1 4 4 1 10-8 16Z"/>
+    <path class="rs-bubble" d="M118 222h30a6 6 0 0 1 6 6v16a6 6 0 0 1-6 6h-18l-9 8v-8h-3a6 6 0 0 1-6-6v-16a6 6 0 0 1 6-6Z"/>
+  {%- when 'ia' %}
+    <g class="ia-lines">
+      <path d="M140 190L200 172M140 190L200 214M140 190L200 256M140 190L200 298M140 240L200 172M140 240L200 214M140 240L200 256M140 240L200 298M140 290L200 172M140 290L200 214M140 290L200 256M140 290L200 298M200 172L262 236M200 214L262 236M200 256L262 236M200 298L262 236"/>
+    </g>
+    <circle class="nd ia-n ia-n1" cx="140" cy="190" r="7"/><circle class="nd ia-n ia-n1" cx="140" cy="240" r="7"/><circle class="nd ia-n ia-n1" cx="140" cy="290" r="7"/>
+    <circle class="nd ia-n ia-n2" cx="200" cy="172" r="6"/><circle class="nd ia-n ia-n2" cx="200" cy="214" r="6"/><circle class="nd ia-n ia-n2" cx="200" cy="256" r="6"/><circle class="nd ia-n ia-n2" cx="200" cy="298" r="6"/>
+    <circle class="tint ia-n ia-n3" cx="262" cy="236" r="14"/><circle class="f ia-n ia-n3" cx="262" cy="236" r="6"/>
+  {%- else %}
+    <circle class="tint gen-sun" cx="200" cy="262" r="54"/>
+    <path class="gen-h" d="M122 300h156"/><path class="gen-h gen-h2" d="M140 314h120"/>
+  {%- endcase %}
+  </g>
+</svg>

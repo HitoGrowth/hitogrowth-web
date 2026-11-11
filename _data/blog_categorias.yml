@@ -1,0 +1,6 @@
+# Categorías del blog que salen en el menú y en los filtros, en este orden.
+# "valor" debe coincidir con la categoría elegida en Sveltia.
+- { nombre: "Estrategia", valor: "Estrategia" }
+- { nombre: "Publicidad", valor: "Publicidad" }
+- { nombre: "Redes Sociales", valor: "Redes sociales" }
+- { nombre: "IA", valor: "IA" }

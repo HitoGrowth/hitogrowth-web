@@ -21,12 +21,16 @@
       <div class="prose">
         {{ content }}
       </div>
-      <aside class="post-cta">
-        <h2 class="post-cta__title">¿Hablamos de tu negocio?</h2>
-        <p>La primera consulta es gratuita y sin compromiso: analizamos tu presencia digital y detectamos oportunidades reales de crecimiento.</p>
-        <a class="btn btn--primary" href="/#contacto">Pide presupuesto</a>
-      </aside>
     </article>
+    {%- case page.category -%}
+      {%- when 'Web' %}{% assign pp_id = 'web' %}
+      {%- when 'Estrategia' %}{% assign pp_id = 'consultoria' %}
+      {%- when 'Publicidad' %}{% assign pp_id = 'publicidad' %}
+      {%- when 'Redes sociales' %}{% assign pp_id = 'redes' %}
+      {%- when 'IA' %}{% assign pp_id = 'ia' %}
+      {%- else %}{% assign pp_id = '' %}
+    {%- endcase %}
+    {% include presupuesto.html servicio=pp_id titulo="¿Hablamos de tu negocio?" texto="La primera consulta es gratuita y sin compromiso: analizamos tu presencia digital y detectamos oportunidades reales de crecimiento." %}
   </main>
 {% include site-footer.html %}
 </body>

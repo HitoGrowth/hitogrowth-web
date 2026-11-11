@@ -15,15 +15,17 @@ description: Ideas prácticas de marketing digital, publicidad, redes sociales e
       <div class="container bl-hero__inner">
         <h1 class="bl-hero__title">Blog</h1>
         <p class="bl-hero__lede">Ideas prácticas de marketing digital, publicidad, redes sociales e IA para hacer crecer tu negocio.</p>
-        {%- assign categorias = site.posts | map: "category" | compact | uniq | sort -%}
-        {%- if categorias.size > 1 %}
+        {%- assign usadas = site.data.blog_categorias | map: "valor" -%}
+        {%- assign extra = site.posts | map: "category" | compact | uniq | sort -%}
         <nav class="bl-filter" aria-label="Filtrar por categoría">
           <button type="button" class="bl-filter__btn" aria-pressed="true" data-filter="">Todos</button>
-          {%- for cat in categorias %}
-          <button type="button" class="bl-filter__btn" aria-pressed="false" data-filter="{{ cat | escape }}">{{ cat }}</button>
+          {%- for c in site.data.blog_categorias %}
+          <button type="button" class="bl-filter__btn" aria-pressed="false" data-filter="{{ c.valor | escape }}">{{ c.nombre }}</button>
           {%- endfor %}
+          {%- for cat in extra %}{% unless usadas contains cat %}
+          <button type="button" class="bl-filter__btn" aria-pressed="false" data-filter="{{ cat | escape }}">{{ cat }}</button>
+          {%- endunless %}{% endfor %}
         </nav>
-        {%- endif %}
       </div>
     </header>
 
@@ -39,11 +41,12 @@ description: Ideas prácticas de marketing digital, publicidad, redes sociales e
         <div class="blog-empty">
           {% include torii.html %}
           <p>Muy pronto publicaremos los primeros artículos.</p>
-          <a class="btn btn--primary" href="/#contacto">Mientras tanto, hablemos</a>
+          <a class="btn btn--primary" href="#presupuesto">Mientras tanto, hablemos</a>
         </div>
         {% endif %}
       </div>
     </section>
+    {% include presupuesto.html titulo="¿Hablamos de tu negocio?" texto="La primera consulta es gratuita y sin compromiso: analizamos tu presencia digital y detectamos oportunidades reales de crecimiento." %}
   </main>
 {% include site-footer.html %}
 <script>
@@ -65,6 +68,9 @@ description: Ideas prácticas de marketing digital, publicidad, redes sociales e
         if (none) none.hidden = shown > 0;
       });
     });
+    // Llegar desde el menú con ?categoria=Publicidad (o la que sea) ya filtrado
+    var pedida = new URLSearchParams(location.search).get('categoria');
+    if (pedida) buttons.forEach(function (b) { if (b.getAttribute('data-filter') === pedida) b.click(); });
   })();
 </script>
 </body>

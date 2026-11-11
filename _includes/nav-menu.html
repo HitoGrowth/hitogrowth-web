@@ -1,0 +1,16 @@
+{%- comment -%} Desplegable del menú: include.tipo = "servicios" o "blog" {%- endcomment -%}
+<div class="nav__sub" role="group" aria-label="{% if include.tipo == 'blog' %}Categorías del blog{% else %}Servicios{% endif %}">
+  <div class="nav__sub-inner">
+  {%- if include.tipo == 'blog' %}
+    <a href="/blog/">Todos</a>
+    {%- for c in site.data.blog_categorias %}
+    <a href="/blog/?categoria={{ c.valor | url_encode }}">{{ c.nombre }}</a>
+    {%- endfor %}
+  {%- else %}
+    {%- assign lista = site.pages | where: "layout", "servicio" | sort: "orden" -%}
+    {%- for s in lista %}
+    <a href="{{ s.url }}"{% if s.url == page.url %} aria-current="page"{% endif %}>{{ s.nombre }}</a>
+    {%- endfor %}
+  {%- endif %}
+  </div>
+</div>
