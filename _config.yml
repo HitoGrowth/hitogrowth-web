@@ -25,3 +25,4 @@ defaults:
 exclude:
   - .gitignore
   - README.md
+  - contenido-servicios.md
