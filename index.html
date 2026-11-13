@@ -24,7 +24,7 @@
   <link rel="stylesheet" href="/assets/fonts/fonts.css">
 
   <!-- Si cambias styles.css o script.js, sube el número de "?v=" para que el navegador cargue la versión nueva -->
-  <link rel="stylesheet" href="styles.css?v=24">
+  <link rel="stylesheet" href="styles.css?v=26">
 </head>
 <body>
 
@@ -171,46 +171,27 @@
         </div>
 
         <ul class="service-list">
-          <li class="service">
-            {% include svc-icon-web.html %}
+          {%- for area in site.data.areas %}
+          <li class="service service--area">
+            {% include svc-icon-{{ area.icono }}.html %}
             <div class="service__text">
-              <h3 class="service__name">Desarrollo y diseño web</h3>
-            <p class="service__desc">Páginas web profesionales, claras y rápidas, optimizadas y pensadas para la conversión.</p>
-            <a class="service__link" href="/servicios/diseno-web-pymes/">Descubre el servicio <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"/></svg></a>
+              <h3 class="service__name">{{ area.titulo }}</h3>
+              <ul class="area__links">
+                {%- for url in area.servicios %}
+                {%- assign sv = site.pages | where: "url", url | first %}
+                <li>
+                  <a class="area__link" href="{{ url }}">
+                    <span class="area__name">{{ sv.nombre }}</span>
+                    <span class="area__desc">{{ sv.resumen }}</span>
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"/></svg>
+                  </a>
+                </li>
+                {%- endfor %}
+              </ul>
+              <a class="service__link service__link--cta" href="#contacto">Primera consulta gratuita <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"/></svg></a>
             </div>
           </li>
-          <li class="service">
-            {% include svc-icon-map.html %}
-            <div class="service__text">
-              <h3 class="service__name">Consultoría y estrategia digital</h3>
-            <p class="service__desc">Analizamos dónde está tu negocio hoy y trazamos el camino para crecer en digital, con prioridades claras y pasos concretos.</p>
-            <a class="service__link" href="/servicios/consultoria-estrategia-digital/">Descubre el servicio <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"/></svg></a>
-            </div>
-          </li>
-          <li class="service">
-            {% include svc-icon-target.html %}
-            <div class="service__text">
-              <h3 class="service__name">Publicidad digital</h3>
-            <p class="service__desc">Campañas optimizadas en buscadores y redes sociales para impactar a tu target y multiplicar tus conversiones.</p>
-            <a class="service__link" href="/servicios/publicidad-digital/">Descubre el servicio <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"/></svg></a>
-            </div>
-          </li>
-          <li class="service">
-            {% include svc-icon-social.html %}
-            <div class="service__text">
-              <h3 class="service__name">Contenido en redes sociales</h3>
-            <p class="service__desc">Ideas, textos y publicaciones para tus redes, coherentes con tu marca y pensados para tu público.</p>
-            <a class="service__link" href="/servicios/contenido-redes-sociales/">Descubre el servicio <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"/></svg></a>
-            </div>
-          </li>
-          <li class="service">
-            {% include svc-icon-ai.html %}
-            <div class="service__text">
-              <h3 class="service__name">IA para tu negocio</h3>
-            <p class="service__desc">Inteligencia artificial aplicada a tu día a día: automatizar tareas, atender mejor a tus clientes y ganar tiempo.</p>
-            <a class="service__link" href="/servicios/ia-para-empresas/">Descubre el servicio <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"/></svg></a>
-            </div>
-          </li>
+          {%- endfor %}
         </ul>
       </div>
     </section>

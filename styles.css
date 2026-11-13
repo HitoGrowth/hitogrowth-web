@@ -1346,3 +1346,39 @@ p, li, dd, blockquote { text-wrap: pretty; }
     text-transform: none; line-height: 1.3; padding: .5rem 0 .5rem 1rem; border: 0; color: var(--text-dim);
   }
 }
+
+/* =========================================================
+   PORTADA · servicios agrupados en 3 áreas
+   ========================================================= */
+.service__link--cta::after { display: none; } /* la tarjeta tiene varios enlaces: no se hace clicable entera */
+.area__links { margin-top: 1.25rem; border-top: 1px solid var(--line); }
+.area__link {
+  position: relative; display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: .3rem 1.25rem; align-items: center;
+  padding: 1rem 0; border-bottom: 1px solid var(--line); text-decoration: none; color: inherit;
+}
+.area__name { font-weight: 600; font-size: 1.08rem; color: var(--white); transition: color .2s; }
+.area__desc { grid-column: 1; font-size: .95rem; line-height: 1.55; color: var(--text-dim); max-width: 52ch; }
+.area__link svg {
+  grid-column: 2; grid-row: 1 / span 2; width: 22px; stroke: var(--mint); stroke-width: 1.8; fill: none;
+  transition: transform .25s var(--ease-out);
+}
+.area__link:focus-visible { outline: 2px solid var(--mint); outline-offset: 4px; }
+@media (hover: hover) and (pointer: fine) {
+  .area__link:hover .area__name { color: var(--mint); }
+  .area__link:hover svg { transform: translateX(6px); }
+  .service--area:hover .service__link svg { transform: none; }
+  .service__link--cta:hover svg { transform: translateX(6px) !important; }
+}
+/* Desplegable de Servicios agrupado por áreas */
+.nav__area {
+  font-family: var(--font-display); font-stretch: 112%; font-weight: 700;
+  font-size: .68rem; letter-spacing: .14em; text-transform: uppercase; color: var(--mint); opacity: .75;
+}
+@media (min-width: 1081px) {
+  .nav__area { padding: .85rem .9rem .3rem; }
+  .nav__area:first-child { padding-top: .5rem; }
+  .nav__area:not(:first-child) { margin-top: .35rem; border-top: 1px solid var(--line); }
+}
+@media (max-width: 1080px) {
+  .nav__area { padding: .7rem 0 .15rem 1rem; }
+}

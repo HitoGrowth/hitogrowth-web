@@ -7,9 +7,12 @@
     <a href="/blog/?categoria={{ c.valor | url_encode }}">{{ c.nombre }}</a>
     {%- endfor %}
   {%- else %}
-    {%- assign lista = site.pages | where: "layout", "servicio" | sort: "orden" -%}
-    {%- for s in lista %}
+    {%- for area in site.data.areas %}
+    <p class="nav__area">{{ area.titulo }}</p>
+    {%- for url in area.servicios %}
+    {%- assign s = site.pages | where: "url", url | first %}
     <a href="{{ s.url }}"{% if s.url == page.url %} aria-current="page"{% endif %}>{{ s.nombre }}</a>
+    {%- endfor %}
     {%- endfor %}
   {%- endif %}
   </div>

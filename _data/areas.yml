@@ -1,0 +1,16 @@
+# Las 3 áreas de servicio. Las usan la portada, el menú y el pie de página.
+# "servicios" son las direcciones de las páginas de servicio, en el orden en que se muestran.
+- titulo: "Web y estrategia digital"
+  icono: web
+  servicios:
+    - /servicios/diseno-web-pymes/
+    - /servicios/consultoria-estrategia-digital/
+- titulo: "Conseguir clientes"
+  icono: target
+  servicios:
+    - /servicios/publicidad-digital/
+    - /servicios/contenido-redes-sociales/
+- titulo: "IA para tu negocio"
+  icono: ai
+  servicios:
+    - /servicios/ia-para-empresas/
