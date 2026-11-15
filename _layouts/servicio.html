@@ -47,7 +47,7 @@
         <nav class="sv-crumbs" aria-label="Ruta">
           <a href="/">Inicio</a><span aria-hidden="true">/</span><a href="/#servicios">Servicios</a><span aria-hidden="true">/</span><span aria-current="page">{{ page.title }}</span>
         </nav>
-        <h1 class="sv-hero__title">{{ page.h1 }} <em>{{ page.h1_claim }}</em></h1>
+        <h1 class="sv-hero__title">{{ page.h1 }}{% if page.h1_claim != "" and page.h1_claim %} <em>{{ page.h1_claim }}</em>{% endif %}</h1>
         <p class="sv-hero__lede">{{ page.intro }}</p>
         <div class="sv-hero__actions">
           <a class="btn btn--primary" href="{{ contacto }}">{{ page.cta }}</a>
