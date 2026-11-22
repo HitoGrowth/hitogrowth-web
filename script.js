@@ -5,8 +5,8 @@
    ========================================================= */
 const CONFIG = {
   email: 'hitogrowth@gmail.com',
-  whatsapp: '34696596161',          // prefijo del país + número, sin espacios ni "+"
-  whatsappTexto: '+34 696 59 61 61', // cómo se muestra el número en la web
+  whatsapp: '34636143056',          // prefijo del país + número, sin espacios ni "+"
+  whatsappTexto: '+34 636 14 30 56', // cómo se muestra el número en la web
 
   // Enlaces a tus páginas legales. Déjalos vacíos ('') mientras no las tengas.
   privacidadUrl: 'privacidad.html',
