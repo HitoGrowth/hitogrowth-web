@@ -1382,3 +1382,16 @@ p, li, dd, blockquote { text-wrap: pretty; }
 @media (max-width: 1080px) {
   .nav__area { padding: .7rem 0 .15rem 1rem; }
 }
+
+/* Pie: enlace a Instagram */
+.footer__copy { display: flex; flex-wrap: wrap; align-items: center; gap: 1rem 1.5rem; }
+.footer__copy .footer__social { order: -1; }
+.footer__copy p { margin: 0; }
+.footer__social {
+  display: inline-flex; align-items: center; gap: .55rem;
+  color: var(--text); text-decoration: none; font-size: .9rem;
+  padding: .45rem .9rem .45rem .55rem; border: 1px solid var(--line); border-radius: 999px;
+  transition: color .2s, border-color .2s;
+}
+.footer__social svg { width: 22px; height: 22px; fill: none; stroke: var(--mint); stroke-width: 1.6; }
+.footer__social:hover { color: var(--mint); border-color: var(--mint); }
